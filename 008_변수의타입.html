@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        //원시타입 string, number, bigint, boolean, undefined, symbol, null
+
+        let str1 = 'hello';
+        let str2 = str1;
+        console.log(str2); // 'hello'
+
+        str1 = 'world';
+        console.log(str2); // str2에 할당된 값은 여전히 'hello' 입니다.
+
+
+        //이스케이프 문자
+        // \' 작은따옴표
+        // \" 큰따옴표
+        // \t 가로탭
+        // \n 줄바꿈
+        console.log('i\'m so happy');
+        console.log('h\ne\nl\nl\no');
+
+        //string
+        console.log(typeof 'hello'); 
+
+        //number
+        console.log(typeof 10.1); 
+        console.log(typeof NaN); 
+
+        //boolean
+        console.log(typeof true);
+        console.log(typeof false);
+
+        //undefined
+        let a; //값이 없음
+        console.log(a);
+        console.log(typeof undefined); 
+
+        //null(값이 비어있음을 명시적으로 나타낸다.)
+        console.log(typeof null); //object로 나옴. 설계오류. 논외..
+
+        //bigint - 취급할 수 있는 최대 숫자 (2의 53승 -1)보다 큰 정수를 다룰 때
+        console.log(typeof 90071992547409960n);
+
+        //symbol - 고유한 값을 생성할 때 사용
+        console.log(typeof Symbol());
+
+
+
+        ////////////////////////////////////////////
+
+        //function
+        console.log(typeof function(){});
+
+        //Object
+        console.log(typeof [10,20,30]);
+        console.log(typeof {a:10, b:20});
+        console.log(typeof /정규표현식/gi);
+
+        //형변환(number->string, string->number)
+        //다른타입->문자
+        console.log(+'10'); //실무팁
+        console.log(Number('10')); //권하지않음
+        console.log(parseInt('10')); //권함
+        console.log(parseFloat('10.1')); //권함
+        console.log(Number(true)); //1
+        console.log(parseInt(true)); //NaN
+
+        //다른타입->숫자
+        let hojun=10;
+        console.log(hojun.toString()); //권함
+        console.log(String(10)); //주의
+        console.log(''+10);
+
+        //다른타입->boolean
+        console.log(Boolean(-1)); //true
+        console.log(Boolean(0)); //false
+        console.log(!!1000); //true
+        let hojun2 = 10;
+        console.log(!!hojun2); //true
+    </script>
+</body>
+</html>
